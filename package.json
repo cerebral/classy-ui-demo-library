@@ -1,0 +1,38 @@
+{
+  "name": "classy-ui-demo-library",
+  "version": "1.0.0",
+  "description": "A demo library using classy-ui",
+  "main": "index.js",
+  "scripts": {
+    "react": "node_modules/@storybook/react/bin/index.js -s -p 6006 --config-dir react/.storybook",
+    "vue": "node_modules/@storybook/vue/bin/index.js -s -p 6006 --config-dir vue/.storybook",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerebral/classy-ui-demo-library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cerebral/classy-ui-demo-library/issues"
+  },
+  "homepage": "https://github.com/cerebral/classy-ui-demo-library#readme",
+  "dependencies": {
+    "classy-ui": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@storybook/react": "^5.3.13",
+    "@storybook/vue": "^5.3.13",
+    "babel-loader": "^8.0.6",
+    "babel-preset-vue": "^2.0.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.0",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
