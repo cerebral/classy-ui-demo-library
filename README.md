@@ -11,7 +11,7 @@ This library must be transpiled with your application code.
 Install:
 
 ```
-npm install classy-ui-demo-library webpack-cli webpack-dev-server @babel/core babel-loader clean-webpack-plugin html-webpack-plugin --save-dev
+npm install classy-ui-demo-library classy-ui@beta webpack-cli webpack-dev-server @babel/core babel-loader clean-webpack-plugin html-webpack-plugin --save-dev
 ```
 
 ### React
