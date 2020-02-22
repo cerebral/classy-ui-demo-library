@@ -64,6 +64,14 @@ module.exports = {
   }
 };
 ```
+And in your **package.json** add the following script:
+```
+{
+  "scripts": {
+    "start": "webpack-dev-server",
+  }
+}
+```
 
 ## Development
 
