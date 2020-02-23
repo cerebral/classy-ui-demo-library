@@ -2,7 +2,7 @@ import Vue from "vue";
 
 import PrimaryButton from "../PrimaryButton.vue";
 
-export default { title: "Button" };
+export default { title: "PrimaryButton" };
 
 export const enabled = () => ({
   components: { PrimaryButton },

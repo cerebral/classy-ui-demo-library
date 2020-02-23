@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "react": "node_modules/@storybook/react/bin/index.js -s -p 6006 --config-dir react/.storybook",
-    "vue": "node_modules/@storybook/vue/bin/index.js -s -p 6006 --config-dir vue/.storybook",
+    "vue": "node_modules/@storybook/vue/bin/index.js -s -p 6007 --config-dir vue/.storybook",
+    "html": "node_modules/@storybook/html/bin/index.js -s -p 6008 --config-dir html/.storybook",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
+    "@storybook/html": "^5.3.13",
     "@storybook/react": "^5.3.13",
     "@storybook/vue": "^5.3.13",
     "babel-loader": "^8.0.6",
