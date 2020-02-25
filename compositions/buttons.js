@@ -1,15 +1,17 @@
-import { c } from "classy-ui";
+import { compose, tokens } from "classy-ui";
 
 export const baseButton = disabled =>
-  c(
-    "background-color-gray-200",
-    "border-radius-sm",
-    "border-color-gray-400",
-    "color-gray-800",
-    {
-      "opacity-75": disabled
-    }
+  compose(
+    tokens.backgroundColor.GRAY_200,
+    tokens.borderRadius.SMALL,
+    tokens.borderColor.GRAY_400,
+    tokens.color.GRAY_800,
+    disabled && tokens.opacity.OPACITY_75
   );
 
 export const primaryButton = disabled =>
-  c(baseButton(disabled), "background-color-blue-500", "border-color-blue-700");
+  compose(
+    baseButton(disabled),
+    tokens.backgroundColor.BLUE_500,
+    tokens.borderColor.BLUE_700
+  );

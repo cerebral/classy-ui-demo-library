@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/cerebral/classy-ui-demo-library#readme",
   "dependencies": {
-    "classy-ui": "^4.0.2"
+    "classy-ui": "^5.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
