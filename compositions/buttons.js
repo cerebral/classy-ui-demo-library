@@ -2,16 +2,16 @@ import { compose, tokens } from "classy-ui";
 
 export const baseButton = disabled =>
   compose(
-    tokens.backgroundColor.GRAY_200,
-    tokens.borderRadius.SMALL,
-    tokens.borderColor.GRAY_400,
-    tokens.color.GRAY_800,
+    tokens.backgroundColor.GRAY_20,
+    tokens.borderRadius.RADIUS_10,
+    tokens.borderColor.GRAY_40,
+    tokens.color.GRAY_80,
     disabled && tokens.opacity.OPACITY_75
   );
 
 export const primaryButton = disabled =>
   compose(
     baseButton(disabled),
-    tokens.backgroundColor.BLUE_500,
-    tokens.borderColor.BLUE_700
+    tokens.backgroundColor.BLUE_50,
+    tokens.borderColor.BLUE_70
   );
