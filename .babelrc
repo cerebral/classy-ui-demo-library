@@ -1,7 +1,4 @@
 {
-  /*
-    1
-  */
   "presets": [
     "@babel/env",
     [
@@ -12,5 +9,14 @@
       }
     ]
   ],
-  "plugins": ["classy-ui/plugin"]
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/plugin-proposal-class-properties",
+    "classy-ui/plugin"
+  ]
 }

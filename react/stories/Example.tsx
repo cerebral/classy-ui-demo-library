@@ -1,13 +1,19 @@
 import * as React from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vs } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { tokens, compose } from "classy-ui";
+import { compose, tokens } from "classy-ui";
 
 export const Example: React.FC<{ code: string }> = ({ code, children }) => (
-  <div className={compose(tokens.padding.SPACE_50)}>
-    <SyntaxHighlighter language="javascript" style={vs}>
+  <div className={compose(tokens.margin.SPACE_40)}>
+    <pre
+      className={compose(
+        tokens.borderColor.BLUE_50,
+        tokens.borderWidth.WIDTH_2,
+        tokens.borderStyle.SOLID,
+        tokens.padding.SPACE_40,
+        tokens.display.BLOCK
+      )}
+    >
       {code}
-    </SyntaxHighlighter>
-    <div>{children}</div>
+    </pre>
+    <div className={compose(tokens.marginTop.SPACE_50)}>{children}</div>
   </div>
 );

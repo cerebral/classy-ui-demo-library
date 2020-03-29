@@ -1,16 +1,17 @@
 <template>
-  <container :class="container(size, tokens)">
+  <div :class="container">
     <slot></slot>
-  </container>
+  </div>
 </template>
 <script>
 import { container } from "../compositions/container";
+import { compose } from "classy-ui";
 
 export default {
   name: "container",
   props: ["size", "tokens"],
-  data: () => ({
-    container
+  data: component => ({
+    container: compose(container(component.size), component.tokens)
   })
 };
 </script>
