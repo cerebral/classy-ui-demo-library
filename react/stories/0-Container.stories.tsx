@@ -16,26 +16,23 @@ export const Types = () => (
         Size of the current breakpoint
       </Container>
     </Example>
-    <Example code={`<Container size="mobile" />`}>
-      <Container size="mobile" tokens={compose(tokens.backgroundColor.BLUE_50)}>
+    <Example code={`<Container size="sm" />`}>
+      <Container size="sm" tokens={compose(tokens.backgroundColor.BLUE_50)}>
         Size of mobile breakpoint
       </Container>
     </Example>
-    <Example code={`<Container size="tablet" />`}>
-      <Container size="tablet" tokens={compose(tokens.backgroundColor.BLUE_50)}>
+    <Example code={`<Container size="md" />`}>
+      <Container size="md" tokens={compose(tokens.backgroundColor.BLUE_50)}>
         Size of tablet breakpoint
       </Container>
     </Example>
-    <Example code={`<Container size="laptop" />`}>
-      <Container size="laptop" tokens={compose(tokens.backgroundColor.BLUE_50)}>
+    <Example code={`<Container size="lg" />`}>
+      <Container size="lg" tokens={compose(tokens.backgroundColor.BLUE_50)}>
         Size of laptop breakpoint
       </Container>
     </Example>
-    <Example code={`<Container size="desktop" />`}>
-      <Container
-        size="desktop"
-        tokens={compose(tokens.backgroundColor.BLUE_50)}
-      >
+    <Example code={`<Container size="xl" />`}>
+      <Container size="xl" tokens={compose(tokens.backgroundColor.BLUE_50)}>
         Size of desktop breakpoint
       </Container>
     </Example>
