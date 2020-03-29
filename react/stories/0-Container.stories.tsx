@@ -1,7 +1,7 @@
 import { compose, tokens } from "classy-ui";
 import * as React from "react";
 
-import { Container } from "../Container";
+import { Container } from "../../src/react/Container";
 import { Example } from "./Example";
 
 export default {

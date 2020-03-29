@@ -1,6 +1,6 @@
 import { compose, tokens } from "classy-ui";
 import { moduleMetadata } from "@storybook/angular";
-import { Container } from "../Container";
+import { Container } from "../../src/angular/Container";
 import { Example } from "./Example";
 
 export default {

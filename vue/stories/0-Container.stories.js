@@ -1,6 +1,6 @@
 import Vue from "vue";
 
-import Container from "../Container.vue";
+import Container from "../../src/vue/Container.vue";
 import Example from "./Example.vue";
 import { compose, tokens } from "classy-ui";
 
