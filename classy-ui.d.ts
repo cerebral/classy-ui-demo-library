@@ -27702,7 +27702,7 @@ null
   
     /**
      * ```css
-     * \@media (min-width: 640px) {
+     * \@media (max-width: 640px) {
       $token
 }
      * ```
@@ -27712,7 +27712,7 @@ null
 
     /**
      * ```css
-     * \@media (min-width: 768px) {
+     * \@media (max-width: 768px) {
       $token
 }
      * ```
@@ -27722,7 +27722,7 @@ null
 
     /**
      * ```css
-     * \@media (min-width: 1024px) {
+     * \@media (max-width: 1024px) {
       $token
 }
      * ```
@@ -27732,7 +27732,7 @@ null
 
     /**
      * ```css
-     * \@media (min-width: 1280px) {
+     * \@media (max-width: 1280px) {
       $token
 }
      * ```

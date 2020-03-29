@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "@babel/env",
+    [
+      "@babel/typescript",
+      {
+        "isTSX": true,
+        "allExtensions": true
+      }
+    ]
+  ],
+  "plugins": ["classy-ui/plugin"]
+}

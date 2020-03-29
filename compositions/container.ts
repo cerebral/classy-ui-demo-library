@@ -4,7 +4,7 @@ export type ContainerSize = "sm" | "md" | "lg" | "xl" | "fluid";
 
 export const container = (size?: ContainerSize) =>
   compose(
-    tokens.width.FULL,
+    size === "fluid" ? tokens.width.FULL : tokens.maxWidth.DESKTOP,
     tokens.padding.SPACE_40,
     tokens.marginLeft.AUTO,
     tokens.marginRight.AUTO,

@@ -1,6 +1,6 @@
 {
   "name": "classy-ui-demo-library",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "A demo library using classy-ui",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/cerebral/classy-ui-demo-library#readme",
   "dependencies": {
-    "classy-ui": "^11.0.0"
+    "classy-ui": "^11.0.5"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.900.5",
