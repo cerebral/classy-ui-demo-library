@@ -4,72 +4,48 @@ A demo library using classy-ui
 
 ## Get started
 
-This library must be transpiled with your application code.
+This library must be transpiled with your application code using Babel. It is written in Typescript, which means you need the babel Typescript preset as well.
+
+Install:
+
+```
+npm install classy-ui-demo-library classy-ui@beta
+```
 
 ## Using webpack
 
-Install:
-
-```
-npm install classy-ui-demo-library classy-ui@beta webpack-cli webpack-dev-server @babel/core babel-loader clean-webpack-plugin html-webpack-plugin --save-dev
-```
+Merge the following configuration with your existing:
 
 ### React
 
-Install:
-
-```
-npm install @babel/preset-react --save-dev
-```
-
 ```ts
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-
-module.exports = {
-  mode: "development",
-  entry: "./src/index.jsx",
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: "./dist"
+{
+  resolve: {
+    extensions: [".ts", ".tsx"]
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: "src/index.html"
-    })
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules\/(?!classy-ui-demo-library)/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            plugins: ["classy-ui/plugin"],
-            presets: ["@babel/react"]
-          }
+  rules: [
+    {
+      test: /\.(tsx?)$/,
+      include: /node_modules\/classy-ui-demo-library/,
+      use: {
+        loader: "babel-loader",
+        options: {
+          plugins: ["classy-ui/plugin"],
+          presets: [
+            "@babel/env",
+            [
+              "@babel/typescript",
+              {
+                isTSX: true,
+                allExtensions: true
+              }
+            ],
+            "@babel/react"
+          ]
         }
       }
-    ]
-  },
-  resolve: {
-    extensions: [".js", ".jsx"]
-  },
-  output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist")
-  }
-};
-```
-And in your **package.json** add the following script:
-```
-{
-  "scripts": {
-    "start": "webpack-dev-server",
-  }
+    }
+  ];
 }
 ```
 
@@ -85,4 +61,16 @@ Run the Vue storybook
 
 ```
 npm run vue
+```
+
+Run the Angular storybook
+
+```
+npm run angular
+```
+
+Run the Html storybook
+
+```
+npm run html
 ```
