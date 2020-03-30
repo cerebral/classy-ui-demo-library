@@ -1,5 +1,5 @@
 import { example } from "./example";
-import { container } from "../../compositions/container";
+import { container } from "../../src/compositions/container";
 import { compose, tokens } from "classy-ui";
 
 export default { title: "Container" };

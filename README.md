@@ -4,50 +4,47 @@ A demo library using classy-ui
 
 ## Get started
 
-This library must be transpiled with your application code using Babel. It is written in Typescript, which means you need the babel Typescript preset as well.
+This library must be transpiled with your application code using Babel. It is written in Typescript, which means you need the babel Typescript preset as well in your babel config.
 
 Install:
 
 ```
-npm install classy-ui-demo-library classy-ui@beta
+npm install classy-ui-demo-library
 ```
 
-## Using webpack
-
-Merge the following configuration with your existing:
-
-### React
+Your babel config has to be, even though you do **NOT** use Typescript (The good thing is that you get typing help no matter):
 
 ```ts
 {
-  resolve: {
-    extensions: [".ts", ".tsx"]
-  },
-  rules: [
-    {
-      test: /\.(tsx?)$/,
-      include: /node_modules\/classy-ui-demo-library/,
-      use: {
-        loader: "babel-loader",
-        options: {
-          plugins: ["classy-ui/plugin"],
-          presets: [
-            "@babel/env",
-            [
-              "@babel/typescript",
-              {
-                isTSX: true,
-                allExtensions: true
-              }
-            ],
-            "@babel/react"
-          ]
-        }
-      }
-    }
-  ];
+  "presets": [
+    ["@babel/preset-typescript", { "isTSX": true, "allExtensions": true }]
+  ],
+  "plugins": ["classy-ui/plugin"]
 }
 ```
+
+To include the library with your application code add the following "postinstall" script to package json:
+
+```ts
+{
+  "scripts": {
+    ...,
+    "postinstall": "npx symlink-dir ./node_modules/classy-ui-demo-library/src ./components"
+  }
+}
+```
+
+This will symlink the library to a path of your choice, here **./components**. You can now import from this location in your code. You might want to set up an alias to your version. For example:
+
+```ts
+{
+  "paths": {
+    "components": "./components/react"
+  }
+}
+```
+
+Aliasing depends on your build tool.
 
 ## Development
 
