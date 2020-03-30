@@ -3,13 +3,18 @@
   "version": "3.0.0",
   "description": "A demo library using classy-ui",
   "main": "index.js",
+  "bin": {
+    "classy-ui-demo-library-html": "./node_modules/@storybook/html/bin/index.js -s -p 6009 --config-dir html/.storybook",
+    "classy-ui-demo-library-react": "./node_modules/@storybook/react/bin/index.js -s -p 6006 --config-dir react/.storybook",
+    "classy-ui-demo-library-vue": "./node_modules/@storybook/vue/bin/index.js -s -p 6007 --config-dir vue/.storybook",
+    "classy-ui-demo-library-angular": "./node_modules/@storybook/angular/bin/index.js -s -p 6008 --config-dir angular/.storybook"
+  },
   "scripts": {
-    "react": "npm run clear:babel-cache && node_modules/@storybook/react/bin/index.js -s -p 6006 --config-dir react/.storybook",
+    "react": "node_modules/@storybook/react/bin/index.js -s -p 6006 --config-dir react/.storybook",
     "vue": "node_modules/@storybook/vue/bin/index.js -s -p 6007 --config-dir vue/.storybook",
     "angular": "node_modules/@storybook/angular/bin/index.js -s -p 6008 --config-dir angular/.storybook",
     "html": "node_modules/@storybook/html/bin/index.js -s -p 6009 --config-dir html/.storybook",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clear:babel-cache": "rimraf -rf ./node_modules/.cache/*"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
