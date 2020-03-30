@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env node
 
 const { spawn } = require("child_process");
 const version = process.argv[2];

@@ -1,6 +1,6 @@
 {
   "name": "classy-ui-demo-library",
-  "version": "4.0.1",
+  "version": "4.0.3",
   "description": "A demo library using classy-ui",
   "main": "index.js",
   "bin": "./open-storybook.js",
@@ -23,7 +23,12 @@
   },
   "homepage": "https://github.com/cerebral/classy-ui-demo-library#readme",
   "dependencies": {
-    "classy-ui": "^11.0.5"
+    "classy-ui": "^11.0.5",
+    "@storybook/angular": "^5.3.14",
+    "@storybook/html": "^5.3.17",
+    "@storybook/react": "^5.3.13",
+    "@storybook/vue": "^5.3.13",
+    "babel-loader": "^8.0.6"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.900.5",
@@ -40,11 +45,6 @@
     "@babel/plugin-proposal-decorators": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-typescript": "^7.8.3",
-    "@storybook/angular": "^5.3.14",
-    "@storybook/html": "^5.3.17",
-    "@storybook/react": "^5.3.13",
-    "@storybook/vue": "^5.3.13",
-    "babel-loader": "^8.0.6",
     "babel-preset-vue": "^2.0.2",
     "he": "^1.2.0",
     "react": "^16.12.0",
