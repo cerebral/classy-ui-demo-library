@@ -1,14 +1,9 @@
 {
   "name": "classy-ui-demo-library",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "A demo library using classy-ui",
   "main": "index.js",
-  "bin": {
-    "classy-ui-demo-library-html": "./node_modules/@storybook/html/bin/index.js -s -p 6009 --config-dir html/.storybook",
-    "classy-ui-demo-library-react": "./node_modules/@storybook/react/bin/index.js -s -p 6006 --config-dir react/.storybook",
-    "classy-ui-demo-library-vue": "./node_modules/@storybook/vue/bin/index.js -s -p 6007 --config-dir vue/.storybook",
-    "classy-ui-demo-library-angular": "./node_modules/@storybook/angular/bin/index.js -s -p 6008 --config-dir angular/.storybook"
-  },
+  "bin": "./open-storybook.js",
   "scripts": {
     "react": "node_modules/@storybook/react/bin/index.js -s -p 6006 --config-dir react/.storybook",
     "vue": "node_modules/@storybook/vue/bin/index.js -s -p 6007 --config-dir vue/.storybook",

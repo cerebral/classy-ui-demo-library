@@ -34,7 +34,7 @@ To include the library with your application code add the following "postinstall
 }
 ```
 
-This will symlink the library to a path of your choice, here **./components**. You can now import from this location in your code. You might want to set up an alias to your version. For example:
+This will symlink the library to a path of your choice, here **./components**. You can now import from this location in your code. You might want to set up an alias to where you put the symlink. For example:
 
 ```ts
 {
@@ -45,6 +45,12 @@ This will symlink the library to a path of your choice, here **./components**. Y
 ```
 
 Aliasing depends on your build tool.
+
+Now you import simply as:
+
+```ts
+import { Container } from "components/Container";
+```
 
 ## Development
 
