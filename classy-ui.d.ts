@@ -135,9 +135,49 @@ declare module 'classy-ui' {
      */
     focusWithin: IDecorators;
   
+  
+    /**
+     * ```css
+     * $token::before {}
+     * ```
+     */
+    before: IDecorators;
+  
+
+    /**
+     * ```css
+     * $token::after {}
+     * ```
+     */
+    after: IDecorators;
+  
+
+    /**
+     * ```css
+     * $token::first-line {}
+     * ```
+     */
+    firstLine: IDecorators;
+  
+
+    /**
+     * ```css
+     * $token::first-letter {}
+     * ```
+     */
+    firstLetter: IDecorators;
+  
+
+    /**
+     * ```css
+     * $token::selection {}
+     * ```
+     */
+    selection: IDecorators;
+  
   }
   export type TCompose = (...args: Array<IDecorators | TGroup | Themes | TClassname | boolean | ''>) => TClassname;
-  export type TTokens = { 
+  export type TTokens = {
     
     
   /**
@@ -1575,6 +1615,55 @@ The background-color CSS property sets the background color of an element.
    * ```
    */
   readonly PINK_90: IDecorators;
+  
+    }
+  
+
+    
+  /**
+    * ### background-origin
+The background-origin CSS property sets the background's origin: from the border start, inside the border, or inside the padding.
+[Mozilla Developer Network: background-origin](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin).
+    */
+    backgroundOrigin: {
+      
+  /**
+   
+   * **description**: The background is positioned relative to the border box.
+
+   * ```css
+   * .background-origin-BORDER_BOX {
+   *   background-origin: border-box;
+   * }
+   * ```
+   */
+  readonly BORDER_BOX: IDecorators;
+  
+
+  /**
+   
+   * **description**: The background is positioned relative to the padding box.
+
+   * ```css
+   * .background-origin-PADDING_BOX {
+   *   background-origin: padding-box;
+   * }
+   * ```
+   */
+  readonly PADDING_BOX: IDecorators;
+  
+
+  /**
+   
+   * **description**: The background is positioned relative to the content box.
+
+   * ```css
+   * .background-origin-CONTENT_BOX {
+   *   background-origin: content-box;
+   * }
+   * ```
+   */
+  readonly CONTENT_BOX: IDecorators;
   
     }
   
@@ -15843,9 +15932,9 @@ The bottom CSS property participates in specifying the vertical position of a po
 
     
   /**
-    * ### letter-space
-The letter-space CSS property sets the space behavior between text characters.
-[Mozilla Developer Network: letter-space](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-space).
+    * ### letter-spacing
+The letter-spacing CSS property sets the space behavior between text characters.
+[Mozilla Developer Network: letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing).
     */
     letterSpacing: {
       
@@ -15854,7 +15943,7 @@ The letter-space CSS property sets the space behavior between text characters.
    
    * ```css
    * .letter-spacing-SPACING_10 {
-   *   letter-space: -0.05em;
+   *   letter-spacing: -0.05em;
    * }
    * ```
    */
@@ -15866,7 +15955,7 @@ The letter-space CSS property sets the space behavior between text characters.
    
    * ```css
    * .letter-spacing-SPACING_20 {
-   *   letter-space: -0.025em;
+   *   letter-spacing: -0.025em;
    * }
    * ```
    */
@@ -15878,7 +15967,7 @@ The letter-space CSS property sets the space behavior between text characters.
    
    * ```css
    * .letter-spacing-SPACING_30 {
-   *   letter-space: 0;
+   *   letter-spacing: 0;
    * }
    * ```
    */
@@ -15890,7 +15979,7 @@ The letter-space CSS property sets the space behavior between text characters.
    
    * ```css
    * .letter-spacing-SPACING_40 {
-   *   letter-space: 0.025em;
+   *   letter-spacing: 0.025em;
    * }
    * ```
    */
@@ -15902,7 +15991,7 @@ The letter-space CSS property sets the space behavior between text characters.
    
    * ```css
    * .letter-spacing-SPACING_50 {
-   *   letter-space: 0.05em;
+   *   letter-spacing: 0.05em;
    * }
    * ```
    */
@@ -15914,7 +16003,7 @@ The letter-space CSS property sets the space behavior between text characters.
    
    * ```css
    * .letter-spacing-SPACING_60 {
-   *   letter-space: 0.1em;
+   *   letter-spacing: 0.1em;
    * }
    * ```
    */
@@ -24396,12 +24485,12 @@ The width attribute defines the horizontal length of an element in the user coor
    
    
    * ```css
-   * .width-auto {
+   * .width-AUTO {
    *   width: auto;
    * }
    * ```
    */
-  readonly auto: IDecorators;
+  readonly AUTO: IDecorators;
   
 
   /**

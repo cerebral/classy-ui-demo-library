@@ -6,13 +6,13 @@ import { Example } from "./Example";
 
 export default {
   title: "Container",
-  component: Container
+  component: Container,
 };
 
 export const Default = () => (
   <Example code="<Container />">
     <Container tokens={compose(tokens.backgroundColor.BLUE_50)}>
-      Size of the current breakpoint
+      Max size is desktop breakpoint
     </Container>
   </Example>
 );

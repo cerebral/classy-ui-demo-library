@@ -1,31 +1,22 @@
 module.exports = {
-  webpackFinal: async config => {
+  webpackFinal: async (config) => {
     config.module.rules[2].use.push({
       loader: "babel-loader",
       options: {
-        presets: [
-          "@babel/env",
-          [
-            "@babel/typescript",
-            {
-              isTSX: true,
-              allExtensions: true
-            }
-          ]
-        ],
+        presets: ["@babel/env", "@babel/typescript"],
         plugins: [
           [
             "@babel/plugin-proposal-decorators",
             {
-              legacy: true
-            }
+              legacy: true,
+            },
           ],
           "@babel/plugin-proposal-class-properties",
-          "classy-ui/plugin"
-        ]
-      }
+          "classy-ui/plugin",
+        ],
+      },
     });
     return config;
   },
-  stories: ["../stories/**/*.stories.ts"]
+  stories: ["../stories/**/*.stories.ts"],
 };

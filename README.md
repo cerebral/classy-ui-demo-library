@@ -1,10 +1,10 @@
 # classy-ui-demo-library
 
-A demo library using classy-ui
+A demo library using classy-ui. Take inspiration from it to build your own library.
 
 ## Get started
 
-This library must be transpiled with your application code using Babel. It is written in Typescript, which means you need the babel Typescript preset as well in your babel config.
+This library must be transpiled with your application code using Babel.
 
 Install:
 
@@ -12,13 +12,61 @@ Install:
 npm install classy-ui-demo-library
 ```
 
-Your babel config has to be, even though you do **NOT** use Typescript (The good thing is that you get typing help no matter):
+## Webpack
+
+You will need to include the library in your transpilation. Given that you already use Webpack with Babel you can do the following:
 
 ```ts
 {
+  module: {
+    rules: [
+      // React
+      {
+        test: /\.(tsx?)$/,
+        include: /node_modules\/classy-ui-demo-library/,
+        use: [babelLoaderSettingsForApp],
+      },
+      // Angular
+      {
+        test: /\.ts$/,
+        include: /node_modules\/classy-ui-demo-library/,
+        use: [babelLoaderSettingsForApp],
+      },
+      // Vue
+      {
+        test: /\.vue$/,
+        include: /node_modules\/classy-ui-demo-library/,
+        use: [babelLoaderSettingsForApp],
+      },
+    ];
+  }
+}
+```
+
+**babelLoaderSettingsForApp** are the settings you already use to transpile your app with Babel.
+
+## Parcel
+
+Your babel config needs to include:
+
+```ts
+// React
+{
   "presets": [
+    // Even though you do not use Typescript
     ["@babel/preset-typescript", { "isTSX": true, "allExtensions": true }]
   ],
+  "plugins": ["classy-ui/plugin"]
+}
+// Angular
+{
+  "presets": ["@babel/preset-typescript"],
+  "plugins": ["classy-ui/plugin"]
+}
+// Vue
+{
+  // Even though you do not use Typescript
+  "presets": ["@babel/preset-typescript"],
   "plugins": ["classy-ui/plugin"]
 }
 ```
