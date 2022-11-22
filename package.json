@@ -24,14 +24,14 @@
   "homepage": "https://github.com/cerebral/classy-ui-demo-library#readme",
   "dependencies": {
     "classy-ui": "^11.0.5",
-    "@storybook/angular": "^5.3.14",
-    "@storybook/html": "^5.3.17",
-    "@storybook/react": "^5.3.13",
-    "@storybook/vue": "^5.3.13",
+    "@storybook/angular": "^6.5.13",
+    "@storybook/html": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/vue": "^6.5.13",
     "babel-loader": "^8.0.6"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.900.5",
+    "@angular-devkit/build-angular": "^15.0.0",
     "@angular-devkit/core": "^9.0.5",
     "@angular/common": "^9.0.5",
     "@angular/compiler": "^9.0.5",
